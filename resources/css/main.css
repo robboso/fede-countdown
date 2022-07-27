@@ -1,0 +1,51 @@
+
+button{
+	background-color: black;
+	color:white;
+	margin-top: 1rem;
+}
+
+#timer{
+	background-color: black;
+	color:white;
+	font-size: 8rem;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+#start{
+	color:green;
+	font-size: 2rem;
+}
+
+#stop{
+	color:red;
+	font-size: 2rem;
+}
+
+#reset{
+	color:white;
+	font-size: 2rem;
+}
+
+#config{
+	color:white;
+	font-size: 1rem;
+	margin-top: 2rem;
+}
+
+#countdownInfo{
+	background-image: url("../imgs/TIMER.jpeg"); /* The image used */
+	background-color: #cccccc; /* Used if the image is unavailable */
+	height: 450px; /* You must set a specified height */
+	width: 640px; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+	text-align: center;
+}
+
+#countDownInfoInner{
+	text-align: center;    
+	padding-top: 100px;
+}
