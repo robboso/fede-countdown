@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Fede Countdown</title>
+		<link rel="stylesheet" href="./resources/css/main.css">
+	</head>
+<body>
+	<script type="text/javascript" src="./resources/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="./resources/lib/main.js"></script>
+
+
+
+
+	<div id="countdownInfo">
+		<div id="countdownConfig" style="display: none;">
+			Milliseconds: <input type="number" id="countdownStartFrom" value="30000"></input>
+		</div>
+		<div id="countDownInfoInner">
+			<div id="timer"></div>
+			<button id="start">START</button>
+			<button id="reset">RESET</button>
+			<button id="stop">STOP</button>
+		</div>
+		<button id="config">TOGGLE CONFIGURATION</button>
+	</div>
+
+
+	<script type="text/javascript">
+		var initial = 30000;
+		var count = initial;
+		var counter; //10 will  run it every 100th of a second
+		var initialMillis;
+		$('#start').on('click', function () {
+			clearInterval(counter);
+			initialMillis = Date.now();
+			counter = setInterval(timer, 1);
+		});
+
+		$('#stop').on('click', function () {
+			clearInterval(counter);
+		});
+
+		$('#reset').on('click', function () {
+			clearInterval(counter);
+			count = initial;
+			displayCount(count);
+		});
+
+		$('#config').on('click', function () {
+			$("#countdownConfig").toggle();
+			$("#countDownInfoInner").toggle();
+		});
+
+		$('#countdownStartFrom').change(function () {
+			initial=$('#countdownStartFrom').val();
+			$('#reset').click();
+		});
+
+		displayCount(initial);
+	</script>
+
+</body>
+</html>
