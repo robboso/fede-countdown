@@ -68,18 +68,22 @@
 		displayCount(initial);
 		
 		$(document).keydown(function(event) {
+			//q
     			if (event.which === 81){
 				event.preventDefault();
 				$('#start').click();
 		    	}
+			//w
 			if (event.which === 87){
 				event.preventDefault();
 				$('#reset').click();
 		    	}
+			//e
 			if (event.which === 69){
 				event.preventDefault();
 				$('#stop').click();
 		    	}
+			//r
 			if (event.which === 82){
 				event.preventDefault();
 				$('#clear').click();
