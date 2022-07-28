@@ -19,6 +19,7 @@
 			<button id="start">START</button>
 			<button id="reset">RESET</button>
 			<button id="stop">STOP</button>
+			<button id="clear">CLEAR</button>
 		</div>
 		<button id="config">TOGGLE CONFIGURATION</button>
 	</div>
@@ -45,6 +46,12 @@
 			displayCount(count);
 			$('#start').click();
 		});
+		
+		$('#clear').on('click', function () {
+			clearInterval(counter);
+			count = initial;
+			displayCount(count);
+		});
 
 		$('#config').on('click', function () {
 			$("#countdownConfig").toggle();
@@ -59,6 +66,22 @@
 		});
 
 		displayCount(initial);
+		
+		$(document).keydown(function(event) {
+    			if (event.which === 81){
+				e.preventDefault();
+				$('#start').click();
+		    	}
+			if (event.which === 87){
+				e.preventDefault();
+				$('#reset').click();
+		    	}
+			if (event.which === 69){
+				e.preventDefault();
+				$('#stop').click();
+		    	}
+		});
+		
 	</script>
 
 </body>
