@@ -8,7 +8,7 @@ button{
 #timer{
 	background-color: black;
 	color:white;
-	font-size: 8rem;
+	font-size: 10vw;
 	margin-left: 80px;
 	margin-right: 80px;
 	border: 5px solid white;
@@ -42,8 +42,8 @@ button{
 #countdownInfo{
 	background-image: url("../imgs/TIMER.jpeg"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
-	height: 450px; /* You must set a specified height */
-	width: 640px; /* You must set a specified height */
+	height: 100%; /* You must set a specified height */
+	width: 100%; /* You must set a specified height */
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover; /* Resize the background image to cover the entire container */
