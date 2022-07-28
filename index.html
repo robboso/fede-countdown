@@ -43,6 +43,7 @@
 			clearInterval(counter);
 			count = initial;
 			displayCount(count);
+			$('#start').click();
 		});
 
 		$('#config').on('click', function () {
@@ -52,7 +53,9 @@
 
 		$('#countdownStartFrom').change(function () {
 			initial=$('#countdownStartFrom').val();
-			$('#reset').click();
+			clearInterval(counter);
+			count = initial;
+			displayCount(count);
 		});
 
 		displayCount(initial);
