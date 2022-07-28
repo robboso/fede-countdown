@@ -13,6 +13,10 @@ function timer() {
 }
 
 function displayCount(count) {
+    if(count<0){
+        document.getElementById("timer").innerHTML = 0;
+        return;
+    }
     var res = count / 1000;
     document.getElementById("timer").innerHTML = res.toPrecision(count.toString().length);
 }
