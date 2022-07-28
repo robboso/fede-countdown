@@ -2,6 +2,7 @@
 function timer() {
     if (count <= 0) {
         clearInterval(counter);
+        displayCount(0);
         return;
     }
     var current = Date.now();
