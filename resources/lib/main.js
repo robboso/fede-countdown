@@ -1,7 +1,9 @@
 
+var audioGong = new Audio("./resources/sounds/gong.mp3");
+
 function timer() {
     if (count <= 0) {
-        playSound("./resources/sounds/gong.mp3");
+        playSound(audioGong);
         clearInterval(counter);
         displayCount(0);
         return;
@@ -22,7 +24,6 @@ function displayCount(count) {
     document.getElementById("timer").innerHTML = res.toPrecision(count.toString().length);
 }
 
-function playSound(pathToFile) {
-  var audio = new Audio(pathToFile);
+function playSound(audio) {
   audio.play();
 }
