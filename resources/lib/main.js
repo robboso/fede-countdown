@@ -1,6 +1,7 @@
 
 function timer() {
     if (count <= 0) {
+        playSound("../sounds/gong.mp3");
         clearInterval(counter);
         displayCount(0);
         return;
