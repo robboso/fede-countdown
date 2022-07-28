@@ -20,3 +20,8 @@ function displayCount(count) {
     var res = count / 1000;
     document.getElementById("timer").innerHTML = res.toPrecision(count.toString().length);
 }
+
+function playSound(pathToFile) {
+  var audio = new Audio(pathToFile);
+  audio.play();
+}
